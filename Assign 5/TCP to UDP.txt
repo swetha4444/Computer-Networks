@@ -1,0 +1,6 @@
+To convert a TCP server into a UDP server at least the following changes must be done:
+
+-> Replace SOCK_STREAM with SOCK_DGRAM; IPPROTO_TCP with IPPROTO_UDP.
+-> Remove listen and accept calls.
+-> Replace recv with recvfrom.
+-> Replace send with sendto.
